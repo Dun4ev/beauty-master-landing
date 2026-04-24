@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Nails | Online Booking</title>
+    <meta
+      name="description"
+      content="Online booking page for a manicure master in Belgrade."
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="master-name">
+        <img class="hero__image" id="hero-image" alt="Fresh manicure close-up" />
+        <div class="hero__shade"></div>
+
+        <div class="hero__content">
+          <div class="topline">
+            <span>Online booking</span>
+            <span id="city"></span>
+            <span id="languages"></span>
+          </div>
+
+          <h1 id="master-name"></h1>
+          <p id="tagline" class="tagline"></p>
+
+          <div class="actions" aria-label="Primary actions">
+            <a class="button button--primary" id="booking-link" href="#">
+              <i data-lucide="calendar-check"></i>
+              <span>Book online</span>
+            </a>
+            <a class="button button--ghost" id="portfolio-link" href="#">
+              <i data-lucide="image"></i>
+              <span>Portfolio</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band" aria-label="Profile details">
+        <div class="quick-links" aria-label="Contact links">
+          <a id="telegram-link" class="quick-link" href="#">
+            <i data-lucide="send"></i>
+            <span>Telegram</span>
+          </a>
+          <a id="viber-link" class="quick-link" href="#">
+            <i data-lucide="phone"></i>
+            <span>Viber</span>
+          </a>
+          <a id="whatsapp-link" class="quick-link" href="#">
+            <i data-lucide="message-circle"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a id="instagram-link" class="quick-link" href="#">
+            <i data-lucide="instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+
+        <section class="section" aria-labelledby="services-title">
+          <div class="section-heading">
+            <h2 id="services-title">Services</h2>
+            <p id="currency-label"></p>
+          </div>
+          <div class="service-list" id="service-list"></div>
+        </section>
+
+        <section class="section location-section" aria-labelledby="location-title">
+          <div class="location-copy">
+            <h2 id="location-title">Location</h2>
+            <p id="address"></p>
+            <a class="button button--secondary" id="maps-link" href="#">
+              <i data-lucide="map-pin"></i>
+              <span>Open in Google Maps</span>
+            </a>
+          </div>
+          <a class="map-link" id="map-click-link" href="#" aria-label="Open location in Google Maps">
+            <iframe
+              id="map-frame"
+              title="Google Maps location"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <span class="map-fallback">Open Google Maps</span>
+          </a>
+        </section>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
