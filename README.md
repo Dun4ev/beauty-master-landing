@@ -28,11 +28,41 @@ landing/config.js
 - встроенную карту Google Maps;
 - услуги и цены;
 - главное фото.
+- demo-видео и скриншоты сценария записи.
 
 Для карты используются две ссылки:
 
 - `mapsUrl` — открывает Google Maps по клику;
 - `mapEmbedUrl` — показывает карту прямо на странице.
+
+## Demo-видео и скриншоты
+
+Положите файлы в:
+
+```text
+landing/assets/
+```
+
+Например:
+
+```text
+landing/assets/demo.mp4
+landing/assets/date.png
+landing/assets/time.png
+landing/assets/admin.png
+```
+
+Затем пропишите их в `landing/config.js`:
+
+```js
+demoVideo: "./assets/demo.mp4",
+demoPoster: "./assets/demo-poster.jpg",
+demoSteps: [
+  { title: "Choose a date", text: "...", image: "./assets/date.png" },
+  { title: "Pick a time", text: "...", image: "./assets/time.png" },
+  { title: "Admin gets booking", text: "...", image: "./assets/admin.png" },
+],
+```
 
 ## Как разместить
 

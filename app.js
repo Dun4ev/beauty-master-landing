@@ -46,6 +46,36 @@ profile.services.forEach((service) => {
   serviceList.appendChild(item);
 });
 
+const demoVideo = document.getElementById("demo-video");
+const demoPlaceholder = document.getElementById("demo-placeholder");
+if (profile.demoVideo) {
+  demoVideo.src = profile.demoVideo;
+  if (profile.demoPoster) {
+    demoVideo.poster = profile.demoPoster;
+  }
+  demoPlaceholder.hidden = true;
+} else {
+  demoVideo.hidden = true;
+  document.getElementById("demo-video-wrap").classList.add("is-empty");
+}
+
+const demoSteps = document.getElementById("demo-steps");
+profile.demoSteps.forEach((step, index) => {
+  const item = document.createElement("article");
+  item.className = "demo-step";
+  const image = step.image
+    ? `<img src="${step.image}" alt="${step.title}" />`
+    : `<div class="demo-step__mock">${index + 1}</div>`;
+  item.innerHTML = `
+    ${image}
+    <div>
+      <h3>${step.title}</h3>
+      <p>${step.text}</p>
+    </div>
+  `;
+  demoSteps.appendChild(item);
+});
+
 if (window.lucide) {
   window.lucide.createIcons();
 }

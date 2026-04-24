@@ -258,6 +258,107 @@ h2 {
   color: var(--primary-dark);
 }
 
+.demo-section {
+  padding-top: 2px;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.demo-video {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(145deg, #2a2026, #111013);
+}
+
+.demo-video video {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  display: block;
+  object-fit: cover;
+}
+
+.demo-video.is-empty video {
+  display: none;
+}
+
+.demo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 28px;
+  color: #fff;
+  text-align: center;
+}
+
+.demo-placeholder svg {
+  width: 42px;
+  height: 42px;
+  color: var(--primary);
+}
+
+.demo-placeholder span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.94rem;
+}
+
+.demo-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.demo-step {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 16px;
+  min-height: 132px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.demo-step img,
+.demo-step__mock {
+  width: 120px;
+  height: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--soft);
+}
+
+.demo-step__mock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.demo-step h3 {
+  font-size: 1rem;
+}
+
+.demo-step p {
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .location-section {
   display: grid;
   grid-template-columns: minmax(240px, 0.85fr) minmax(320px, 1.15fr);
@@ -334,8 +435,24 @@ h2 {
   }
 
   .quick-links,
-  .service-list {
+  .service-list,
+  .demo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .demo-video,
+  .demo-video video {
+    min-height: 360px;
+  }
+
+  .demo-step {
+    grid-template-columns: 92px 1fr;
+  }
+
+  .demo-step img,
+  .demo-step__mock {
+    width: 92px;
+    height: 86px;
   }
 
   .section-heading,

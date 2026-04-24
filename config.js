@@ -18,6 +18,25 @@ window.MASTER_PROFILE = {
   currency: "RSD",
   heroImage:
     "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=85",
+  demoVideo: "",
+  demoPoster: "",
+  demoSteps: [
+    {
+      title: "Choose a date",
+      text: "Client opens the bot and sees only available days.",
+      image: "",
+    },
+    {
+      title: "Pick a time",
+      text: "Busy slots disappear automatically after booking.",
+      image: "",
+    },
+    {
+      title: "Admin gets booking",
+      text: "Master receives client name, phone and appointment time.",
+      image: "",
+    },
+  ],
   services: [
     { name: "Classic manicure", price: "2 000 RSD", time: "60 min" },
     { name: "Combined manicure", price: "2 400 RSD", time: "70 min" },
