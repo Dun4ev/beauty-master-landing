@@ -309,22 +309,21 @@ h2 {
 .demo-video {
   position: relative;
   min-height: 420px;
-  overflow: hidden;
+  width: 100%;
   border: 1px solid var(--line);
+  overflow: hidden;
   border-radius: 8px;
   background: linear-gradient(145deg, #2a2026, #111013);
+  cursor: pointer;
+  font: inherit;
 }
 
-.demo-video video {
-  width: 100%;
-  height: 100%;
-  min-height: 420px;
-  display: block;
-  object-fit: cover;
+.demo-video:disabled {
+  cursor: default;
 }
 
-.demo-video.is-empty video {
-  display: none;
+.demo-video:hover .demo-placeholder svg {
+  transform: scale(1.04);
 }
 
 .demo-video.has-poster {
@@ -366,11 +365,74 @@ h2 {
   background: rgba(255, 255, 255, 0.92);
   color: var(--primary);
   box-shadow: 0 18px 40px rgba(30, 18, 24, 0.28);
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease;
 }
 
 .demo-placeholder span {
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.94rem;
+}
+
+.has-open-modal {
+  overflow: hidden;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+
+.video-modal[hidden] {
+  display: none;
+}
+
+.video-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(15, 10, 13, 0.74);
+  cursor: pointer;
+}
+
+.video-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #070608;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.video-modal__panel video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.video-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--ink);
+  cursor: pointer;
 }
 
 .demo-steps {
@@ -647,9 +709,13 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .demo-video,
-  .demo-video video {
+  .demo-video {
     min-height: 360px;
+  }
+
+  .video-modal__panel {
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   .demo-step {

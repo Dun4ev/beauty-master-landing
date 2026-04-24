@@ -121,19 +121,13 @@
           </div>
 
           <div class="demo-grid">
-            <div class="demo-video" id="demo-video-wrap">
-              <video
-                id="demo-video"
-                controls
-                playsinline
-                preload="metadata"
-              ></video>
+            <button class="demo-video" id="demo-video-wrap" type="button">
               <div class="demo-placeholder" id="demo-placeholder">
                 <i data-lucide="play-circle"></i>
                 <strong id="demo-video-title"></strong>
                 <span id="demo-video-text"></span>
               </div>
-            </div>
+            </button>
 
             <div class="demo-steps" id="demo-steps"></div>
           </div>
@@ -165,6 +159,21 @@
         </footer>
       </section>
     </main>
+
+    <div class="video-modal" id="video-modal" hidden>
+      <button class="video-modal__backdrop" id="video-modal-backdrop" type="button" aria-label="Close video"></button>
+      <div class="video-modal__panel" role="dialog" aria-modal="true" aria-label="Demo video">
+        <button class="video-modal__close" id="video-modal-close" type="button" aria-label="Close video">
+          <i data-lucide="x"></i>
+        </button>
+        <video
+          id="demo-video"
+          controls
+          playsinline
+          preload="metadata"
+        ></video>
+      </div>
+    </div>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./config.js"></script>

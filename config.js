@@ -31,7 +31,8 @@ window.MASTER_PROFILE = {
     en: {
       title: "Anna Nails | Online Booking",
       demoLabel: "Demo page",
-      demoNote: "Example website and Telegram booking bot included as a demo package.",
+      demoNote:
+        "Example website and Telegram booking bot for any service business where clients book a date and time.",
       onlineBooking: "Online booking",
       tagline: "Manicure, gel polish and clean everyday nails",
       bookOnline: "Book online",
@@ -66,7 +67,7 @@ window.MASTER_PROFILE = {
       demoSteps: [
         {
           title: "Choose a date",
-          text: "Client opens the bot and sees only available days.",
+          text: "Client opens the bot and sees only available days and times.",
           image: "",
         },
         {
@@ -138,7 +139,8 @@ window.MASTER_PROFILE = {
     sr: {
       title: "Anna Nails | Online zakazivanje",
       demoLabel: "Demo stranica",
-      demoNote: "Primer sajta i Telegram bota za zakazivanje u demo paketu.",
+      demoNote:
+        "Primer sajta i Telegram bota za svaki posao sa uslugama gde klijenti zakazuju datum i vreme.",
       onlineBooking: "Online zakazivanje",
       tagline: "Manikir, gel lak i uredni nokti za svaki dan",
       bookOnline: "Zakaži termin",
@@ -173,7 +175,7 @@ window.MASTER_PROFILE = {
       demoSteps: [
         {
           title: "Izbor datuma",
-          text: "Klijent otvara bot i vidi samo dostupne dane.",
+          text: "Klijent otvara bot i vidi samo dostupne dane i vremena.",
           image: "",
         },
         {
@@ -245,7 +247,8 @@ window.MASTER_PROFILE = {
     ru: {
       title: "Anna Nails | Онлайн-запись",
       demoLabel: "Тестовая страница",
-      demoNote: "Пример сайта и Telegram-бота для записи, который идет как демо-пакет.",
+      demoNote:
+        "Пример сайта и Telegram-бота для любого бизнеса с услугами, где клиенты записываются на дату и время.",
       onlineBooking: "Онлайн-запись",
       tagline: "Маникюр, гель-лак и аккуратные ногти на каждый день",
       bookOnline: "Записаться",
@@ -280,7 +283,7 @@ window.MASTER_PROFILE = {
       demoSteps: [
         {
           title: "Выбор даты",
-          text: "Клиент открывает бота и видит только доступные дни.",
+          text: "Клиент открывает бота и видит только доступные дни и часы.",
           image: "",
         },
         {
