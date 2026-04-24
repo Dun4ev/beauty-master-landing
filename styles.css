@@ -327,6 +327,14 @@ h2 {
   display: none;
 }
 
+.demo-video.has-poster {
+  background-image:
+    linear-gradient(180deg, rgba(22, 16, 20, 0.18), rgba(22, 16, 20, 0.54)),
+    var(--demo-poster);
+  background-position: center;
+  background-size: cover;
+}
+
 .demo-placeholder {
   position: absolute;
   inset: 0;
@@ -340,10 +348,24 @@ h2 {
   text-align: center;
 }
 
+.demo-video.has-poster .demo-placeholder {
+  justify-content: center;
+  background: rgba(18, 13, 16, 0.18);
+}
+
+.demo-video.has-poster .demo-placeholder strong,
+.demo-video.has-poster .demo-placeholder span {
+  display: none;
+}
+
 .demo-placeholder svg {
-  width: 42px;
-  height: 42px;
+  width: 56px;
+  height: 56px;
+  padding: 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--primary);
+  box-shadow: 0 18px 40px rgba(30, 18, 24, 0.28);
 }
 
 .demo-placeholder span {

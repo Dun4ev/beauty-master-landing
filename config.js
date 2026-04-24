@@ -24,7 +24,7 @@ window.MASTER_PROFILE = {
   heroImage:
     "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=85",
   demoVideo: "",
-  demoPoster: "",
+  demoPoster: "./assets/demo-poster.jpg",
   creatorName: "Created by Dun4ev",
   creatorUrl: "https://t.me/jxx15",
   i18n: {

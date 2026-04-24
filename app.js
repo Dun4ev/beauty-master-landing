@@ -55,6 +55,11 @@ copy.services.forEach((service) => {
 
 const demoVideo = document.getElementById("demo-video");
 const demoPlaceholder = document.getElementById("demo-placeholder");
+const demoVideoWrap = document.getElementById("demo-video-wrap");
+if (profile.demoPoster) {
+  demoVideoWrap.style.setProperty("--demo-poster", `url("${profile.demoPoster}")`);
+  demoVideoWrap.classList.add("has-poster");
+}
 if (profile.demoVideo) {
   demoVideo.src = profile.demoVideo;
   if (profile.demoPoster) {
@@ -63,7 +68,7 @@ if (profile.demoVideo) {
   demoPlaceholder.hidden = true;
 } else {
   demoVideo.hidden = true;
-  document.getElementById("demo-video-wrap").classList.add("is-empty");
+  demoVideoWrap.classList.add("is-empty");
 }
 
 const demoSteps = document.getElementById("demo-steps");
