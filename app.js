@@ -20,6 +20,8 @@ setText("languages", profile.languages);
 setText("tagline", profile.tagline);
 setText("currency-label", `Prices in ${profile.currency}`);
 setText("address", profile.address);
+setText("footer-note", profile.footerNote);
+setText("creator-link", profile.creatorName);
 
 setHref("booking-link", profile.bookingUrl);
 setHref("portfolio-link", profile.portfolioUrl);
@@ -29,6 +31,7 @@ setHref("whatsapp-link", profile.whatsappUrl);
 setHref("instagram-link", profile.instagramUrl);
 setHref("maps-link", profile.mapsUrl);
 setHref("map-click-link", profile.mapsUrl);
+setHref("creator-link", profile.creatorUrl);
 
 document.getElementById("map-frame").src = profile.mapEmbedUrl;
 
@@ -48,22 +51,15 @@ profile.services.forEach((service) => {
 
 const demoVideo = document.getElementById("demo-video");
 const demoPlaceholder = document.getElementById("demo-placeholder");
-const demoWrap = document.getElementById("demo-video-wrap");
-
-if (demoVideo && demoPlaceholder) {
-  if (profile.demoVideo && profile.demoVideo.trim() !== "") {
-    demoVideo.src = profile.demoVideo;
-    if (profile.demoPoster) {
-      demoVideo.poster = profile.demoPoster;
-    }
-    demoPlaceholder.hidden = true;
-    demoVideo.hidden = false;
-    demoWrap.classList.remove("is-empty");
-  } else {
-    demoVideo.hidden = true;
-    demoPlaceholder.hidden = false;
-    demoWrap.classList.add("is-empty");
+if (profile.demoVideo) {
+  demoVideo.src = profile.demoVideo;
+  if (profile.demoPoster) {
+    demoVideo.poster = profile.demoPoster;
   }
+  demoPlaceholder.hidden = true;
+} else {
+  demoVideo.hidden = true;
+  document.getElementById("demo-video-wrap").classList.add("is-empty");
 }
 
 const demoSteps = document.getElementById("demo-steps");

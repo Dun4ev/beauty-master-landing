@@ -49,4 +49,8 @@ window.MASTER_PROFILE = {
     { name: "Nail repair", price: "300 RSD", time: "15 min" },
     { name: "Pedicure", price: "3 500 RSD", time: "90 min" },
   ],
+  footerNote:
+    "This page is an example design included with the booking bot. A custom visual design can be discussed separately.",
+  creatorName: "Created by Dun4ev",
+  creatorUrl: "https://t.me/jxx15",
 };
