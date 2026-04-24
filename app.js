@@ -1,26 +1,30 @@
 const profile = window.MASTER_PROFILE;
+const { copy, setText, setHref } = window.LandingI18n;
 
-const setText = (id, value) => {
-  document.getElementById(id).textContent = value;
-};
-
-const setHref = (id, value) => {
-  const element = document.getElementById(id);
-  element.href = value;
-  element.target = "_blank";
-  element.rel = "noopener noreferrer";
-};
-
-document.title = `${profile.masterName} | Online Booking`;
+document.title = copy.title;
 
 document.getElementById("hero-image").src = profile.heroImage;
 setText("master-name", profile.masterName);
 setText("city", `${profile.area}, ${profile.city}`);
 setText("languages", profile.languages);
-setText("tagline", profile.tagline);
-setText("currency-label", `Prices in ${profile.currency}`);
+setText("demo-label", copy.demoLabel);
+setText("online-booking-label", copy.onlineBooking);
+setText("tagline", copy.tagline);
+setText("demo-note", copy.demoNote);
+setText("booking-label", copy.bookOnline);
+setText("portfolio-label", copy.portfolio);
+setText("features-label", copy.botFeatures);
+setText("services-title", copy.servicesTitle);
+setText("currency-label", copy.pricesIn);
+setText("demo-title", copy.demoTitle);
+setText("demo-subtitle", copy.demoSubtitle);
+setText("demo-video-title", copy.demoVideoTitle);
+setText("demo-video-text", copy.demoVideoText);
+setText("location-title", copy.locationTitle);
 setText("address", profile.address);
-setText("footer-note", profile.footerNote);
+setText("maps-label", copy.openMap);
+setText("map-fallback-label", copy.mapFallback);
+setText("footer-note", copy.footerNote);
 setText("creator-link", profile.creatorName);
 
 setHref("booking-link", profile.bookingUrl);
@@ -36,7 +40,7 @@ setHref("creator-link", profile.creatorUrl);
 document.getElementById("map-frame").src = profile.mapEmbedUrl;
 
 const serviceList = document.getElementById("service-list");
-profile.services.forEach((service) => {
+copy.services.forEach((service) => {
   const item = document.createElement("article");
   item.className = "service-item";
   item.innerHTML = `
@@ -63,7 +67,7 @@ if (profile.demoVideo) {
 }
 
 const demoSteps = document.getElementById("demo-steps");
-profile.demoSteps.forEach((step, index) => {
+copy.demoSteps.forEach((step, index) => {
   const item = document.createElement("article");
   item.className = "demo-step";
   const image = step.image

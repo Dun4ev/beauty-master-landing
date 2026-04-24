@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Features | Beauty Booking</title>
+    <meta
+      name="description"
+      content="Additional features that can be implemented in the beauty booking bot and landing page."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#c33868" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="feature-page">
+      <section class="feature-hero">
+        <div class="feature-hero__inner">
+          <div class="language-switcher" data-language-switcher></div>
+          <a class="back-link" href="./index.html">
+            <i data-lucide="arrow-left"></i>
+            <span id="feature-back-label">Back to demo</span>
+          </a>
+          <div class="topline">
+            <span id="feature-badge-bot"></span>
+            <span id="feature-badge-website"></span>
+            <span id="feature-badge-setup"></span>
+          </div>
+          <h1 id="feature-hero-title"></h1>
+          <p id="feature-hero-text"></p>
+        </div>
+      </section>
+
+      <section class="feature-content">
+        <section class="section demo-section" aria-labelledby="feature-demo-title">
+          <div class="section-heading">
+            <h2 id="feature-demo-title"></h2>
+            <p id="feature-demo-subtitle"></p>
+          </div>
+          <div class="demo-grid">
+            <div class="demo-video" id="feature-demo-video-wrap">
+              <video
+                id="feature-demo-video"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
+              <div class="demo-placeholder" id="feature-demo-placeholder">
+                <i data-lucide="play-circle"></i>
+                <strong id="feature-demo-video-title"></strong>
+                <span id="feature-demo-video-text"></span>
+              </div>
+            </div>
+            <div class="demo-steps" id="feature-demo-steps"></div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="options-title">
+          <div class="section-heading">
+            <h2 id="options-title"></h2>
+            <p id="options-subtitle"></p>
+          </div>
+          <div class="feature-grid" id="feature-grid"></div>
+        </section>
+
+        <section class="section package-section">
+          <div>
+            <h2 id="package-title"></h2>
+            <p id="package-text"></p>
+          </div>
+          <a class="button button--primary" id="feature-contact-link" href="#">
+            <i data-lucide="send"></i>
+            <span id="feature-contact-label"></span>
+          </a>
+        </section>
+
+        <footer class="site-footer">
+          <p id="feature-footer-note"></p>
+          <a id="feature-creator-link" href="#"></a>
+        </footer>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./config.js"></script>
+    <script src="./i18n.js"></script>
+    <script src="./features.js"></script>
+  </body>
+</html>

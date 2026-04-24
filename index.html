@@ -57,23 +57,30 @@
         <div class="hero__shade"></div>
 
         <div class="hero__content">
+          <div class="language-switcher" data-language-switcher></div>
           <div class="topline">
-            <span>Online booking</span>
+            <span id="demo-label">Demo page</span>
+            <span id="online-booking-label">Online booking</span>
             <span id="city"></span>
             <span id="languages"></span>
           </div>
 
           <h1 id="master-name"></h1>
           <p id="tagline" class="tagline"></p>
+          <p id="demo-note" class="demo-note"></p>
 
           <div class="actions" aria-label="Primary actions">
             <a class="button button--primary" id="booking-link" href="#">
               <i data-lucide="calendar-check"></i>
-              <span>Book online</span>
+              <span id="booking-label">Book online</span>
             </a>
             <a class="button button--ghost" id="portfolio-link" href="#">
               <i data-lucide="image"></i>
-              <span>Portfolio</span>
+              <span id="portfolio-label">Portfolio</span>
+            </a>
+            <a class="button button--ghost" href="./features.html">
+              <i data-lucide="sparkles"></i>
+              <span id="features-label">Bot features</span>
             </a>
           </div>
         </div>
@@ -101,7 +108,7 @@
 
         <section class="section" aria-labelledby="services-title">
           <div class="section-heading">
-            <h2 id="services-title">Services</h2>
+            <h2 id="services-title"></h2>
             <p id="currency-label"></p>
           </div>
           <div class="service-list" id="service-list"></div>
@@ -109,8 +116,8 @@
 
         <section class="section demo-section" aria-labelledby="demo-title">
           <div class="section-heading">
-            <h2 id="demo-title">How booking works</h2>
-            <p>Short demo for clients and masters</p>
+            <h2 id="demo-title"></h2>
+            <p id="demo-subtitle"></p>
           </div>
 
           <div class="demo-grid">
@@ -123,8 +130,8 @@
               ></video>
               <div class="demo-placeholder" id="demo-placeholder">
                 <i data-lucide="play-circle"></i>
-                <strong>Demo video</strong>
-                <span>Add a short vertical video to landing/assets</span>
+                <strong id="demo-video-title"></strong>
+                <span id="demo-video-text"></span>
               </div>
             </div>
 
@@ -138,7 +145,7 @@
             <p id="address"></p>
             <a class="button button--secondary" id="maps-link" href="#">
               <i data-lucide="map-pin"></i>
-              <span>Open in Google Maps</span>
+              <span id="maps-label">Open in Google Maps</span>
             </a>
           </div>
           <a class="map-link" id="map-click-link" href="#" aria-label="Open location in Google Maps">
@@ -148,7 +155,7 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-            <span class="map-fallback">Open Google Maps</span>
+            <span class="map-fallback" id="map-fallback-label">Open Google Maps</span>
           </a>
         </section>
 
@@ -161,6 +168,7 @@
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./config.js"></script>
+    <script src="./i18n.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
