@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -286,8 +290,13 @@ h2 {
   object-fit: cover;
 }
 
-.demo-video.is-empty video {
-  display: none;
+.demo-video.is-empty video,
+video[hidden] {
+  display: none !important;
+}
+
+.demo-placeholder[hidden] {
+  display: none !important;
 }
 
 .demo-placeholder {

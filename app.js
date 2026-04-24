@@ -48,15 +48,22 @@ profile.services.forEach((service) => {
 
 const demoVideo = document.getElementById("demo-video");
 const demoPlaceholder = document.getElementById("demo-placeholder");
-if (profile.demoVideo) {
-  demoVideo.src = profile.demoVideo;
-  if (profile.demoPoster) {
-    demoVideo.poster = profile.demoPoster;
+const demoWrap = document.getElementById("demo-video-wrap");
+
+if (demoVideo && demoPlaceholder) {
+  if (profile.demoVideo && profile.demoVideo.trim() !== "") {
+    demoVideo.src = profile.demoVideo;
+    if (profile.demoPoster) {
+      demoVideo.poster = profile.demoPoster;
+    }
+    demoPlaceholder.hidden = true;
+    demoVideo.hidden = false;
+    demoWrap.classList.remove("is-empty");
+  } else {
+    demoVideo.hidden = true;
+    demoPlaceholder.hidden = false;
+    demoWrap.classList.add("is-empty");
   }
-  demoPlaceholder.hidden = true;
-} else {
-  demoVideo.hidden = true;
-  document.getElementById("demo-video-wrap").classList.add("is-empty");
 }
 
 const demoSteps = document.getElementById("demo-steps");
