@@ -1,179 +1,289 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anna Nails Novi Sad | Manicure Online Booking</title>
+    <title>SlotBot | Telegram-бот для записи клиентов</title>
     <meta
       name="description"
-      content="Anna Nails in Novi Sad. Manicure, gel polish, nail design and online booking via Telegram."
+      content="Telegram booking bot + mini landing page for service businesses."
     />
-    <meta
-      name="keywords"
-      content="manicure Novi Sad, nails Novi Sad, gel polish Novi Sad, nail design Novi Sad, online booking nails"
-    />
+    <meta name="keywords" content="telegram booking bot, online booking, landing page, service business" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#c33868" />
+    <meta name="theme-color" content="#5b5cf6" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Anna Nails Novi Sad | Manicure Online Booking" />
+    <meta property="og:title" content="SlotBot | Telegram booking bot + landing page" />
     <meta
       property="og:description"
-      content="Manicure, gel polish and nail design in Novi Sad. Book online in Telegram."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85"
+      content="Product demo landing for a Telegram booking bot and mini landing page package."
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="stylesheet" href="./styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BeautySalon",
-        "name": "Anna Nails",
-        "description": "Manicure, gel polish and nail design in Novi Sad.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Булевар ослобођења 119",
-          "postalCode": "21000",
-          "addressLocality": "Novi Sad",
-          "addressCountry": "RS"
-        },
-        "areaServed": "Novi Sad",
-        "priceRange": "RSD",
-        "url": "https://dun4ev.github.io/beauty-master-landing/",
-        "sameAs": [
-          "https://t.me/Beauty_Master_name_bot",
-          "https://www.instagram.com/"
-        ]
-      }
-    </script>
   </head>
   <body>
-    <main class="page-shell">
-      <section class="hero" aria-labelledby="master-name">
-        <img class="hero__image" id="hero-image" alt="Fresh manicure close-up" />
-        <div class="hero__shade"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SlotBot home">
+        <span class="brand__mark"><i data-lucide="send"></i></span>
+        <span data-product-name>SlotBot</span>
+      </a>
 
-        <div class="hero__content">
-          <div class="language-switcher" data-language-switcher></div>
-          <div class="topline">
-            <span id="demo-label">Demo page</span>
-            <span id="online-booking-label">Online booking</span>
-            <span id="city"></span>
-            <span id="languages"></span>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#features" data-nav="features" data-event="nav_features">Возможности</a>
+        <a href="#how" data-nav="how" data-event="nav_how_it_works">Как работает</a>
+        <a href="#use-cases" data-nav="useCases" data-event="nav_use_cases">Для кого</a>
+        <a href="#pricing" data-nav="pricing">Цены</a>
+        <a href="#faq" data-nav="faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switcher" data-language-switcher></div>
+        <a class="button button--primary button--small" data-contact-link data-event="cta_discuss_project" href="#">
+          <span data-discuss-label>Обсудить внедрение</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-pad">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <span class="badge" data-hero-badge>Демо-кейс: nail master booking</span>
+            <h1 data-hero-title>Telegram-бот для записи клиентов + мини-сайт для привлечения заявок</h1>
+            <p class="hero__text" data-hero-text>
+              Клиент видит услуги, цены и свободные слоты, а затем записывается через Telegram.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" data-booking-link data-event="cta_try_demo" href="#">
+                <i data-lucide="send"></i>
+                <span data-hero-primary>Попробовать демо в Telegram</span>
+              </a>
+              <a class="button button--ghost" href="#owner-benefits" data-event="cta_business_section">
+                <span data-hero-secondary>Для владельцев бизнеса</span>
+              </a>
+            </div>
+            <div class="trust-row" data-trust-row></div>
           </div>
 
-          <h1 id="master-name"></h1>
-          <p id="tagline" class="tagline"></p>
-          <p id="demo-note" class="demo-note"></p>
+          <div class="hero-visual" aria-label="Product mockup">
+            <div class="floating-label" data-mockup-landing-label>Лендинг + бот</div>
+            <article class="phone-mock">
+              <div class="phone-mock__top">
+                <span>9:41</span>
+                <strong data-mockup-phone-title>SlotBot</strong>
+              </div>
+              <div class="phone-mock__screen" data-phone-flow></div>
+              <div class="phone-mock__confirm">
+                <i data-lucide="check"></i>
+                <span>10:10</span>
+              </div>
+            </article>
 
-          <div class="actions" aria-label="Primary actions">
-            <a class="button button--primary" id="booking-link" href="#">
-              <i data-lucide="calendar-check"></i>
-              <span id="booking-label">Book online</span>
-            </a>
-            <a class="button button--ghost" id="portfolio-link" href="#">
-              <i data-lucide="image"></i>
-              <span id="portfolio-label">Portfolio</span>
-            </a>
-            <a class="button button--ghost" href="./features.html">
-              <i data-lucide="sparkles"></i>
-              <span id="features-label">Bot features</span>
+            <article class="landing-preview">
+              <div class="landing-preview__hero">
+                <div>
+                  <strong data-demo-name>Anna • Nail Master</strong>
+                  <p data-demo-intro>Идеальный маникюр для уверенности в себе</p>
+                  <a class="mini-button" data-booking-link href="#" data-mockup-landing-cta>Записаться онлайн</a>
+                </div>
+                <div class="landing-preview__photo"></div>
+              </div>
+              <div class="landing-preview__services" data-preview-services></div>
+              <div class="map-snippet">
+                <i data-lucide="map-pin"></i>
+                <span data-mockup-map>Карта рядом с контактами</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="features">
+        <div class="container">
+          <h2 data-section-client-benefits>Что получает клиент</h2>
+          <div class="card-grid card-grid--four" data-client-benefits></div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="how">
+        <div class="container">
+          <div class="flow-card">
+            <h2 data-section-workflow>Как это работает</h2>
+            <div class="step-flow" data-workflow></div>
+            <p class="flow-note" data-workflow-note>
+              Мастер или администратор получает новую запись без ручной переписки.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="video-demo">
+        <div class="container">
+          <div class="video-demo-card">
+            <div class="video-demo-card__copy">
+              <span class="badge">MP4 demo</span>
+              <h2 data-video-title>Видео-демонстрация</h2>
+              <p data-video-text>
+                Покажите клиенту или владельцу бизнеса, как выглядит путь от лендинга до записи в Telegram.
+              </p>
+            </div>
+            <div class="video-demo-card__media">
+              <video data-demo-video controls playsinline preload="metadata">
+                <span data-video-fallback>Если видео не загрузилось, проверьте путь к mp4 в config.js.</span>
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="owner-benefits">
+        <div class="container split-section">
+          <div>
+            <h2 data-section-owner-benefits>Почему это полезно владельцу</h2>
+            <div class="card-grid card-grid--three" data-owner-benefits></div>
+          </div>
+          <aside class="use-cases-card" id="use-cases">
+            <h2 data-section-use-cases>Подходит для</h2>
+            <div class="use-cases" data-use-cases></div>
+            <p data-use-cases-note>Ногти - только один из примеров использования.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="demo-showcase">
+        <div class="container demo-showcase">
+          <div class="demo-showcase__copy">
+            <span class="badge" data-showcase-badge>Демо-обертки</span>
+            <h2 data-showcase-title>Один бот. Разные бизнесы.</h2>
+            <p data-showcase-text>
+              Логика записи остается общей, а витрина меняется под нишу: услуги, цены, адрес, фото, язык и тексты.
+            </p>
+            <div class="demo-showcase__links" data-showcase-links></div>
+          </div>
+          <figure class="demo-showcase__visual">
+            <img data-showcase-image src="./assets/demo-niches-showcase.png" alt="" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight demo-case" id="demo">
+        <div class="container">
+          <h2 data-demo-title>Пример применения: сайт мастера маникюра</h2>
+          <div class="demo-case__grid">
+            <article class="demo-page-card">
+              <div class="demo-page-card__copy">
+                <span class="badge" data-demo-badge>Beauty / Nail demo</span>
+                <h3 data-demo-name>Anna • Nail Master</h3>
+                <p data-demo-intro>Идеальный маникюр для уверенности в себе</p>
+                <div class="demo-page-card__actions">
+                  <a class="button button--primary" href="./demo/beauty/index.html" data-event="cta_watch_demo">
+                    <i data-lucide="external-link"></i>
+                    <span data-demo-open-page-cta>Открыть демо-страницу</span>
+                  </a>
+                  <a class="button button--secondary" data-booking-link href="#">
+                    <i data-lucide="send"></i>
+                    <span data-demo-book-cta>Записаться</span>
+                  </a>
+                </div>
+              </div>
+              <div class="demo-page-preview">
+                <iframe
+                  src="./demo/beauty/index.html"
+                  title="Beauty / Nail demo landing preview"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </article>
+
+            <aside class="demo-checklist">
+              <h3 data-demo-checklist-title>В демо-кейс входит:</h3>
+              <ul data-demo-checklist></ul>
+              <div class="callout">
+                <i data-lucide="sparkles"></i>
+                <strong data-demo-callout-title></strong>
+                <p data-demo-callout-text></p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="business-features">
+        <div class="container">
+          <h2 data-section-business-features>Функции для бизнеса</h2>
+          <div class="card-grid card-grid--four" data-business-features></div>
+        </div>
+      </section>
+
+      <section class="section-pad section-pad--tight" id="pricing">
+        <div class="container">
+          <div class="pricing-note">
+            <h2 data-pricing-title>Цены</h2>
+            <p data-pricing-text>Стоимость зависит от ниши, языков, дизайна и нужной логики записи. Базовый пакет можно обсудить в Telegram.</p>
+            <a class="button button--secondary" data-contact-link href="#" data-event="cta_discuss_project">
+              <span data-discuss-label>Обсудить внедрение</span>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="content-band" aria-label="Profile details">
-        <div class="quick-links" aria-label="Contact links">
-          <a id="telegram-link" class="quick-link" href="#">
-            <i data-lucide="send"></i>
-            <span>Telegram</span>
-          </a>
-          <a id="viber-link" class="quick-link" href="#">
-            <i data-lucide="phone"></i>
-            <span>Viber</span>
-          </a>
-          <a id="whatsapp-link" class="quick-link" href="#">
-            <i data-lucide="message-circle"></i>
-            <span>WhatsApp</span>
-          </a>
-          <a id="instagram-link" class="quick-link" href="#">
-            <i data-lucide="instagram"></i>
-            <span>Instagram</span>
-          </a>
+      <section class="section-pad section-pad--tight" id="faq">
+        <div class="container faq-grid">
+          <article>
+            <h2 data-faq-title>FAQ</h2>
+            <p data-faq-question="0">Нужен ли backend для лендинга?</p>
+            <span data-faq-answer="0">Нет. Лендинг остается статическим и может жить на GitHub Pages.</span>
+          </article>
+          <article>
+            <p data-faq-question="1">Можно ли заменить nail-кейс?</p>
+            <span data-faq-answer="1">Да. Услуги, тексты, визуальный стиль и сценарий записи меняются под вашу нишу.</span>
+          </article>
         </div>
+      </section>
 
-        <section class="section" aria-labelledby="services-title">
-          <div class="section-heading">
-            <h2 id="services-title"></h2>
-            <p id="currency-label"></p>
+      <section class="section-pad section-pad--tight">
+        <div class="container">
+          <div class="final-cta">
+            <div>
+              <h2 data-cta-title>Нужен такой же бот и лендинг под ваш бизнес?</h2>
+              <p data-cta-text>Сделаем базовую версию быстро, а затем расширим под ваш процесс.</p>
+            </div>
+            <div class="final-cta__actions">
+              <a class="button button--light" data-contact-link data-event="cta_discuss_project" href="#">
+                <i data-lucide="message-circle"></i>
+                <span data-cta-discuss>Обсудить проект</span>
+              </a>
+              <a class="button button--outline-light" href="#demo" data-event="cta_watch_demo">
+                <i data-lucide="play"></i>
+                <span data-cta-watch>Смотреть демо</span>
+              </a>
+            </div>
           </div>
-          <div class="service-list" id="service-list"></div>
-        </section>
-
-        <section class="section demo-section" aria-labelledby="demo-title">
-          <div class="section-heading">
-            <h2 id="demo-title"></h2>
-            <p id="demo-subtitle"></p>
-          </div>
-
-          <div class="demo-grid">
-            <button class="demo-video" id="demo-video-wrap" type="button">
-              <div class="demo-placeholder" id="demo-placeholder">
-                <i data-lucide="play-circle"></i>
-                <strong id="demo-video-title"></strong>
-                <span id="demo-video-text"></span>
-              </div>
-            </button>
-
-            <div class="demo-steps" id="demo-steps"></div>
-          </div>
-        </section>
-
-        <section class="section location-section" aria-labelledby="location-title">
-          <div class="location-copy">
-            <h2 id="location-title">Location</h2>
-            <p id="address"></p>
-            <a class="button button--secondary" id="maps-link" href="#">
-              <i data-lucide="map-pin"></i>
-              <span id="maps-label">Open in Google Maps</span>
-            </a>
-          </div>
-          <a class="map-link" id="map-click-link" href="#" aria-label="Open location in Google Maps">
-            <iframe
-              id="map-frame"
-              title="Google Maps location"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <span class="map-fallback" id="map-fallback-label">Open Google Maps</span>
-          </a>
-        </section>
-
-        <footer class="site-footer">
-          <p id="footer-note"></p>
-          <a id="creator-link" href="#"></a>
-        </footer>
+        </div>
       </section>
     </main>
 
-    <div class="video-modal" id="video-modal" hidden>
-      <button class="video-modal__backdrop" id="video-modal-backdrop" type="button" aria-label="Close video"></button>
-      <div class="video-modal__panel" role="dialog" aria-modal="true" aria-label="Demo video">
-        <button class="video-modal__close" id="video-modal-close" type="button" aria-label="Close video">
-          <i data-lucide="x"></i>
-        </button>
-        <video
-          id="demo-video"
-          controls
-          playsinline
-          preload="metadata"
-        ></video>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top">
+            <span class="brand__mark"><i data-lucide="send"></i></span>
+            <span data-product-name>SlotBot</span>
+          </a>
+          <p data-footer-subtitle>Telegram booking bot + landing page</p>
+          <div class="socials">
+            <a data-telegram-link href="#" aria-label="Telegram"><i data-lucide="send"></i></a>
+            <a data-instagram-link href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a data-whatsapp-link href="#" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+          </div>
+        </div>
+        <div class="footer-columns" data-footer-columns></div>
+        <div class="footer-contacts">
+          <p><i data-lucide="send"></i><a data-contact-link data-footer-telegram href="#">Telegram: @jxx15</a></p>
+          <p><i data-lucide="map-pin"></i><span data-footer-location>Белград, Сербия</span></p>
+          <small data-footer-copyright>© 2026 SlotBot. Все права защищены.</small>
+        </div>
       </div>
-    </div>
+    </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="./config.js"></script>

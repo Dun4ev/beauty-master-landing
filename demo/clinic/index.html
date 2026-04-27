@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Clinic | Demo Landing</title>
+    <meta
+      name="description"
+      content="Демо-страница клиники на базе SlotBot: услуги, специалисты, отзывы, контакты и запись через Telegram."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#2f8cff" />
+    <link rel="stylesheet" href="../demo-page.css" />
+    <style>
+      :root {
+        --accent: #2f8cff;
+        --accent-dark: #1767d1;
+        --soft: #eaf4ff;
+        --hero-image: url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=88");
+        --avatar-image: url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=160&q=82");
+      }
+
+      .gallery div:nth-child(1) {
+        background-image: url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=85");
+      }
+
+      .gallery div:nth-child(2) {
+        background-image: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=500&q=85");
+      }
+
+      .gallery div:nth-child(3) {
+        background-image: url("https://images.unsplash.com/photo-1580281657527-47f249e8f4df?auto=format&fit=crop&w=500&q=85");
+      }
+
+      .gallery div:nth-child(4) {
+        background-image: url("https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=500&q=85");
+      }
+    </style>
+  </head>
+  <body>
+    <main class="demo-shell">
+      <div class="top-bar" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <div class="url">novaclinic.rs</div>
+      </div>
+
+      <section>
+        <header class="site-header">
+          <a class="brand" href="#top" aria-label="Nova Clinic">
+            <span class="brand-mark"><i data-lucide="cross"></i></span>
+            <span><strong>Nova Clinic</strong><small>care by appointment</small></span>
+          </a>
+          <nav class="site-nav" aria-label="Навигация">
+            <a href="#top">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#specialists">Специалисты</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+          <a class="button button--primary" href="https://t.me/Beauty_Master_name_bot">
+            <i data-lucide="calendar-check"></i><span>Записаться</span>
+          </a>
+        </header>
+
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <span class="badge"><i data-lucide="shield-check"></i>Запись к специалистам без звонков</span>
+            <h1>Медицинская запись <span>через Telegram</span> за пару минут</h1>
+            <p>
+              Пациент выбирает направление, врача, дату и удобное время. Администратор
+              получает заявку без ручной переписки.
+            </p>
+            <div class="actions">
+              <a class="button button--primary" href="https://t.me/Beauty_Master_name_bot">
+                <i data-lucide="calendar-days"></i><span>Записаться онлайн</span>
+              </a>
+              <a class="button button--secondary" href="https://t.me/jxx15">
+                <i data-lucide="send"></i><span>Написать в Telegram</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image" role="img" aria-label="Светлый ресепшен клиники"></div>
+        </section>
+
+        <section class="content-grid">
+          <div>
+            <section class="section" id="services">
+              <div class="section-head"><h2>Услуги и цены</h2></div>
+              <div class="service-grid">
+                <article class="service-card"><span><i data-lucide="stethoscope"></i></span><h3>Консультация терапевта</h3><strong>3 500 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="heart-pulse"></i></span><h3>Кардиолог</h3><strong>5 500 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="activity"></i></span><h3>УЗИ диагностика</h3><strong>от 4 000 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="test-tube"></i></span><h3>Анализы</h3><strong>от 1 200 RSD</strong></article>
+              </div>
+            </section>
+
+            <section class="section" id="specialists">
+              <div class="section-head">
+                <h2>Клиника и специалисты</h2>
+                <a href="https://t.me/Beauty_Master_name_bot">Выбрать врача →</a>
+              </div>
+              <div class="gallery"><div></div><div></div><div></div><div></div></div>
+            </section>
+          </div>
+
+          <aside class="side">
+            <section class="side-card" id="reviews">
+              <h2>Отзывы пациентов</h2>
+              <div class="rating"><strong>4.9</strong><span>★★★★★</span></div>
+              <blockquote>Удобно записалась без звонка, администратор быстро подтвердил время.</blockquote>
+              <div class="person"><div class="avatar"></div><div><strong>Елена П.</strong><span>1 неделю назад</span></div></div>
+            </section>
+            <section class="side-card" id="contacts">
+              <h2>Как нас найти</h2>
+              <p>Белград, Сербия</p>
+              <div class="map"><i data-lucide="map-pin"></i></div>
+            </section>
+          </aside>
+        </section>
+
+        <footer class="footer">
+          <a href="https://t.me/Beauty_Master_name_bot"><i data-lucide="send"></i><span>Telegram<br />@nova_clinic_bot</span></a>
+          <a href="https://wa.me/381601234567"><i data-lucide="message-circle"></i><span>WhatsApp<br />+381 60 123 4567</span></a>
+          <a href="#contacts"><i data-lucide="map-pin"></i><span>Адрес<br />Белград, Сербия</span></a>
+          <p><i data-lucide="heart-pulse"></i> Демо медицинской записи SlotBot</p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>if (window.lucide) window.lucide.createIcons();</script>
+  </body>
+</html>

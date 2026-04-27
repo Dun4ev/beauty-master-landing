@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flow Studio | Demo Landing</title>
+    <meta name="description" content="Демо-страница студии занятий на базе SlotBot: расписание, группы, цены и запись через Telegram." />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#f59e0b" />
+    <link rel="stylesheet" href="../demo-page.css" />
+    <style>
+      :root {
+        --accent: #f59e0b;
+        --accent-dark: #b86c00;
+        --soft: #fff6df;
+        --hero-image: url("https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=1200&q=88");
+        --avatar-image: url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&q=82");
+      }
+      .gallery div:nth-child(1) { background-image: url("https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=500&q=85"); }
+      .gallery div:nth-child(2) { background-image: url("https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=500&q=85"); }
+      .gallery div:nth-child(3) { background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=500&q=85"); }
+      .gallery div:nth-child(4) { background-image: url("https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=500&q=85"); }
+    </style>
+  </head>
+  <body>
+    <main class="demo-shell">
+      <div class="top-bar" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">flowstudio.rs</div></div>
+      <section>
+        <header class="site-header">
+          <a class="brand" href="#top"><span class="brand-mark"><i data-lucide="sparkles"></i></span><span><strong>Flow Studio</strong><small>classes booking</small></span></a>
+          <nav class="site-nav" aria-label="Навигация"><a href="#top">Главная</a><a href="#services">Занятия</a><a href="#works">Студия</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+          <a class="button button--primary" href="https://t.me/Beauty_Master_name_bot"><i data-lucide="calendar-check"></i><span>Записаться</span></a>
+        </header>
+        <section class="hero" id="top">
+          <div class="hero-copy">
+            <span class="badge"><i data-lucide="users"></i>Группы и индивидуальные занятия</span>
+            <h1>Расписание занятий <span>и запись в Telegram</span></h1>
+            <p>Ученик выбирает формат, дату и свободное место. Студия получает запись без ручной переписки.</p>
+            <div class="actions"><a class="button button--primary" href="https://t.me/Beauty_Master_name_bot"><i data-lucide="calendar-days"></i><span>Записаться онлайн</span></a><a class="button button--secondary" href="https://t.me/jxx15"><i data-lucide="send"></i><span>Написать в Telegram</span></a></div>
+          </div>
+          <div class="hero-image" role="img" aria-label="Студия занятий"></div>
+        </section>
+        <section class="content-grid">
+          <div>
+            <section class="section" id="services">
+              <div class="section-head"><h2>Занятия и цены</h2></div>
+              <div class="service-grid">
+                <article class="service-card"><span><i data-lucide="sun"></i></span><h3>Йога утром</h3><strong>1 500 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="users"></i></span><h3>Групповое занятие</h3><strong>1 800 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="user-round"></i></span><h3>Индивидуально</h3><strong>4 000 RSD</strong></article>
+                <article class="service-card"><span><i data-lucide="ticket"></i></span><h3>Абонемент</h3><strong>от 9 000 RSD</strong></article>
+              </div>
+            </section>
+            <section class="section" id="works"><div class="section-head"><h2>Студия и форматы</h2><a href="https://t.me/Beauty_Master_name_bot">Выбрать занятие →</a></div><div class="gallery"><div></div><div></div><div></div><div></div></div></section>
+          </div>
+          <aside class="side">
+            <section class="side-card" id="reviews"><h2>Отзывы учеников</h2><div class="rating"><strong>4.9</strong><span>★★★★★</span></div><blockquote>Выбрала занятие и сразу увидела свободные места. Очень удобно.</blockquote><div class="person"><div class="avatar"></div><div><strong>София Д.</strong><span>2 дня назад</span></div></div></section>
+            <section class="side-card" id="contacts"><h2>Как нас найти</h2><p>Белград, Сербия</p><div class="map"><i data-lucide="map-pin"></i></div></section>
+          </aside>
+        </section>
+        <footer class="footer"><a href="https://t.me/Beauty_Master_name_bot"><i data-lucide="send"></i><span>Telegram<br />@flow_studio_bot</span></a><a href="https://wa.me/381601234567"><i data-lucide="message-circle"></i><span>WhatsApp<br />+381 60 123 4567</span></a><a href="#contacts"><i data-lucide="map-pin"></i><span>Адрес<br />Белград, Сербия</span></a><p><i data-lucide="sparkles"></i> Демо записи на занятия SlotBot</p></footer>
+      </section>
+    </main>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script><script>if (window.lucide) window.lucide.createIcons();</script>
+  </body>
+</html>
