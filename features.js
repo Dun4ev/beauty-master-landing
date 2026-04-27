@@ -21,16 +21,52 @@ setText("feature-contact-label", copy.discussCustom);
 
 const demoVideo = document.getElementById("feature-demo-video");
 const demoPlaceholder = document.getElementById("feature-demo-placeholder");
+const demoVideoWrap = document.getElementById("feature-demo-video-wrap");
+const videoModal = document.getElementById("feature-video-modal");
+const videoModalClose = document.getElementById("feature-video-modal-close");
+const videoModalBackdrop = document.getElementById("feature-video-modal-backdrop");
+if (profile.demoPoster) {
+  demoVideoWrap.style.setProperty("--demo-poster", `url("${profile.demoPoster}")`);
+  demoVideoWrap.classList.add("has-poster");
+}
 if (profile.demoVideo) {
   demoVideo.src = profile.demoVideo;
   if (profile.demoPoster) {
     demoVideo.poster = profile.demoPoster;
   }
-  demoPlaceholder.hidden = true;
+  demoVideoWrap.classList.add("is-playable");
 } else {
-  demoVideo.hidden = true;
-  document.getElementById("feature-demo-video-wrap").classList.add("is-empty");
+  demoVideoWrap.disabled = true;
+  demoVideoWrap.classList.add("is-empty");
 }
+
+const openVideo = async () => {
+  if (!profile.demoVideo) {
+    return;
+  }
+  videoModal.hidden = false;
+  document.body.classList.add("has-open-modal");
+  try {
+    await demoVideo.play();
+  } catch (_) {
+    // Browsers may block autoplay; controls remain visible for manual playback.
+  }
+};
+
+const closeVideo = () => {
+  demoVideo.pause();
+  videoModal.hidden = true;
+  document.body.classList.remove("has-open-modal");
+};
+
+demoVideoWrap.addEventListener("click", openVideo);
+videoModalClose.addEventListener("click", closeVideo);
+videoModalBackdrop.addEventListener("click", closeVideo);
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !videoModal.hidden) {
+    closeVideo();
+  }
+});
 
 const demoSteps = document.getElementById("feature-demo-steps");
 copy.demoSteps.forEach((step, index) => {
