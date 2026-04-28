@@ -700,10 +700,10 @@ h3 {
 
 .video-demo-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.82fr) minmax(360px, 1.18fr);
-  gap: 24px;
+  grid-template-columns: minmax(320px, 1fr) minmax(220px, 0.42fr);
+  gap: 18px;
   align-items: center;
-  padding: 26px;
+  padding: 14px 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background:
@@ -713,25 +713,47 @@ h3 {
 }
 
 .video-demo-card__copy p {
-  margin-top: 12px;
+  max-width: 620px;
+  margin-top: 10px;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 .video-demo-card__media {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: #111522;
-  box-shadow: var(--shadow);
+  border-radius: 34px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 18%),
+    #111522;
+  box-shadow: 0 24px 60px rgba(20, 25, 54, 0.18);
+  justify-self: center;
+  width: min(100%, 200px);
+  padding: 7px;
+}
+
+.video-demo-card__media::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  z-index: 2;
+  width: 48px;
+  height: 9px;
+  border-radius: 999px;
+  background: #0f1324;
+  transform: translateX(-50%);
 }
 
 .video-demo-card video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
+  max-height: 315px;
+  border-radius: 20px;
   background: #111522;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .split-section {
@@ -768,8 +790,8 @@ h3 {
 
 .demo-case__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: 26px;
+  grid-template-columns: minmax(0, 1fr) minmax(270px, 0.34fr);
+  gap: 18px;
   margin-top: 20px;
   align-items: stretch;
 }
@@ -780,8 +802,8 @@ h3 {
 
 .demo-page-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.46fr) minmax(420px, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(210px, 0.34fr) minmax(520px, 1fr);
+  gap: 18px;
   padding: 22px;
   overflow: hidden;
 }
@@ -814,7 +836,7 @@ h3 {
 }
 
 .demo-page-preview {
-  height: 520px;
+  height: 500px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -823,10 +845,10 @@ h3 {
 }
 
 .demo-page-preview iframe {
-  width: 1440px;
-  height: 1100px;
+  width: 1180px;
+  height: 1000px;
   border: 0;
-  transform: scale(0.47);
+  transform: scale(0.5);
   transform-origin: 0 0;
 }
 

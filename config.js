@@ -153,6 +153,7 @@ window.MASTER_PROFILE = {
         "Мастер-классы",
         "Небольшие события",
         "Клиники",
+        "Зубной врач",
         "Автосервис",
       ],
       useCasesNote: "Ногти - только один из примеров использования.",
@@ -343,7 +344,7 @@ window.MASTER_PROFILE = {
         { icon: "heart", title: "Repeat visits", text: "Easy rebooking helps clients return." },
         { icon: "paintbrush", title: "Niche customization", text: "Bot and site match your process and style." },
       ],
-      useCases: ["Nail master", "Barber", "Massage", "Cosmetology", "Yoga and classes", "Workshops", "Small events", "Clinics", "Auto service"],
+      useCases: ["Nail master", "Barber", "Massage", "Cosmetology", "Yoga and classes", "Workshops", "Small events", "Clinics", "Dentist", "Auto service"],
       useCasesNote: "Nails are just one example use case.",
       nicheShowcase: {
         badge: "Demo wrappers",
@@ -501,7 +502,7 @@ window.MASTER_PROFILE = {
         { icon: "heart", title: "Povratak klijenata", text: "Lako ponovno zakazivanje vraca klijente." },
         { icon: "paintbrush", title: "Prilagodjavanje nisi", text: "Bot i sajt se prilagodjavaju vasem stilu." },
       ],
-      useCases: ["Manikir", "Berber", "Masaza", "Kozmetologija", "Joga i casovi", "Radionice", "Mali dogadjaji", "Klinike", "Auto servis"],
+      useCases: ["Manikir", "Berber", "Masaza", "Kozmetologija", "Joga i casovi", "Radionice", "Mali dogadjaji", "Klinike", "Zubar", "Auto servis"],
       useCasesNote: "Nokti su samo jedan primer upotrebe.",
       nicheShowcase: {
         badge: "Demo varijante",

@@ -149,7 +149,7 @@ landing/sitemap.xml
 на реальный адрес страницы. Например:
 
 ```text
-https://yourname.github.io/slotbot-booking-landing/
+https://yourname.github.io/beauty-master-landing/
 ```
 
 После публикации добавьте сайт в Google Search Console:
@@ -161,7 +161,7 @@ https://search.google.com/search-console
 И отправьте sitemap:
 
 ```text
-https://yourname.github.io/slotbot-booking-landing/sitemap.xml
+https://yourname.github.io/beauty-master-landing/sitemap.xml
 ```
 
 Индексация не мгновенная. Для тестового демо это не обязательно, но для реального мастера и локального поиска в Novi Sad это полезно.
