@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dun4ev.github.io/beauty-master-landing/</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://dun4ev.github.io/beauty-master-landing/?lang=sr"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dun4ev.github.io/beauty-master-landing/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dun4ev.github.io/beauty-master-landing/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dun4ev.github.io/beauty-master-landing/"/>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dun4ev.github.io/beauty-master-landing/features.html</loc>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://dun4ev.github.io/beauty-master-landing/features.html?lang=sr"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://dun4ev.github.io/beauty-master-landing/features.html?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dun4ev.github.io/beauty-master-landing/features.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dun4ev.github.io/beauty-master-landing/features.html"/>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

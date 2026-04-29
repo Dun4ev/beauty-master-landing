@@ -91,6 +91,21 @@ hrefAll("[data-instagram-link]", profile.instagramUrl);
 hrefAll("[data-whatsapp-link]", profile.whatsappUrl);
 setHref("creator-link", profile.creatorUrl);
 
+const initEmail = () => {
+  const emailLink = $("[data-email-link]");
+  if (!emailLink) return;
+
+  const parts = ["dun4ev44", "gmail.com"];
+  const email = parts.join("@");
+
+  emailLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:${email}`;
+  });
+};
+
+initEmail();
+
 const trustRow = $("[data-trust-row]");
 copy.hero.trust.forEach((item, index) => {
   const span = document.createElement("span");
