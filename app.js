@@ -93,15 +93,23 @@ setHref("creator-link", profile.creatorUrl);
 
 const initEmail = () => {
   const emailLink = $("[data-email-link]");
-  if (!emailLink) return;
+  const emailTextContainer = $("[data-email-text]");
+  const emailTextLink = $("[data-email-text-link]");
 
   const parts = ["dun4ev44", "gmail.com"];
   const email = parts.join("@");
 
-  emailLink.addEventListener("click", (e) => {
+  if (emailTextContainer) {
+    emailTextContainer.textContent = email;
+  }
+
+  const openMail = (e) => {
     e.preventDefault();
     window.location.href = `mailto:${email}`;
-  });
+  };
+
+  if (emailLink) emailLink.addEventListener("click", openMail);
+  if (emailTextLink) emailTextLink.addEventListener("click", openMail);
 };
 
 initEmail();
